@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Consensus</title>
+  <meta name="description" content="Consensus">
+  <meta name="author" content="Brandon Klassen">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/format.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <script src="../js/login.js"></script>
+</head>
+
+<body>
+  <header>
+        <div class="header">
+            <div class="headerlogo">
+                <img id="headerlogo" src="../images/headerlogo.png" alt="consensus logo">
+            </div>
+        </div>
+  </header>
+  <section>
+      <div class="content">
+          <div class="login">
+                <h1 id="login-message">Login</h1><br>
+                <form class="form" method="post">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" class="form-control">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control">
+                    <div class="submit">
+                        <button id="submit" type="submit" class="btn btn-dark" onclick=login()>Login</button>
+                    </div>
+                </form>
+                <hr>
+                <nav id="login-nav">
+                    <p>Don't have an account?</p>
+                    <a href="create.html">Create an Account</a>
+                </nav>
+            </div>
+      </div>
+  </section>
+  <footer>
+      <div class="footer"></div>
+  </footer>
+</body>
+</html>

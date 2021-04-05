@@ -1,0 +1,39 @@
+header, footer{
+    height: 5vh;
+    width: 100vw
+}
+
+.header{
+    height: 5vh;
+    width: 100vw;
+    background-color: #202020;
+    box-sizing: border-box;
+    border-bottom: 0.2vh black solid;
+    position: fixed;
+    top: 0;
+}
+
+.headerlogo{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.headerlogo img{
+    height: 5vh;
+}
+
+section{
+    height: 90vh;
+    background-color: #fafafa;
+}
+
+.footer{
+    height: 5vh;
+    width: 100vw;
+    background-color: #202020;
+    box-sizing: border-box;
+    border-top: 0.2vh black solid;
+    position: fixed;
+    bottom: 0;
+}

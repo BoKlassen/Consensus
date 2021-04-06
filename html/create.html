@@ -14,41 +14,11 @@
   <link rel="stylesheet" href="../css/login.css">
   <script src="../js/login.js" async></script>
 </head>
-<script type="text/javascript">
-    function create() {
-        document.querySelector('form.form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            console.log('here');
-            document.cookie = "username=" + document.getElementById('username').value;
-            console.log('here2');
-            console.log(browser.cookies.get({
-    url: tabs[0].url,
-    name: "username"
-  }));
-            console.log('here3');
-        })
-    }
-    function getCookie(cname) {
-      var name = cname + "=";
-      var decodedCookie = decodeURIComponent(document.cookie);
-      var ca = decodedCookie.split(';');
-      for(var i = 0; i <ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return "";
-    }
-</script>
 <body>
     <header>
           <div class="header">
               <div class="headerlogo">
-                  <img id="headerlogo" src="../images/headerlogo.png" alt="consensus logo">
+                  <a href="index.html"><img id="headerlogo" src="../images/headerlogo.png" alt="consensus logo"></a>
               </div>
           </div>
     </header>

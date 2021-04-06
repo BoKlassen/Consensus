@@ -10,10 +10,10 @@
       <link rel="stylesheet" href="../css/reset.css">
       <link rel="stylesheet" href="../css/format.css">
       <link rel="stylesheet" href="../css/post.css">
-      <script src="../js/load_posts.js"></script>
+      <script src="../js/user.js"></script>
+      <script src="../js/posts.js"></script>
       <script src="../js/post_list.js"></script>
       <script src="../js/user_list.js"></script>
-      <script src="../js/load_user.js"></script>
    </head>
    <body>
       <header>
@@ -31,9 +31,8 @@
           </div>
       </section>
       <script type="text/javascript">
-        for(var i = 0; i < 1; i++){
-            createPost(i);
-        }
+            const post_id = sessionStorage.getItem('requested_post');
+            draw_post(post_id);
       </script>
       <footer>
          <div class="footer"></div>

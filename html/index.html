@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/format.css">
     <link rel="stylesheet" href="../css/post.css">
-    <script src="../js/load_posts.js"></script>
+    <script src="../js/user.js"></script>
+    <script src="../js/posts.js"></script>
     <script src="../js/post_list.js"></script>
     <script src="../js/user_list.js"></script>
-    <script src="../js/load_user.js"></script>
 
 </head>
 
@@ -37,8 +37,14 @@
             </div>
         </section>
         <script type="text/javascript">
+            // const order = post_order();
+            // for (var i = order.length - 1; i >= 0; i--) {
+            //     draw_post(order[i]);
+            // }
+
+
             for (var i = 0; i < 105; i++) {
-                createPost(i);
+                draw_post(i);
             }
         </script>
     </section>

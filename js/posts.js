@@ -1,4 +1,4 @@
-function createPost(post_id){
+function draw_post(post_id){
     const post = getPost(post_id);
     const shares = post.shares;
     const comments = post.comments;
@@ -15,7 +15,7 @@ function createPost(post_id){
                                     '</div>' +
                                     '<div class="col-sm-10"><a id="username" href="user.html" onclick="save_user(' + user_id + ')">' + username + '</a></div>' +
                                     '<div id="options" class="col-sm-1">' +
-                                    '   <img class="util-button" src="../images/options.png" alt="Options Button">' +
+                                    '<img class="util-button" src="../images/options.png" alt="Options Button">' +
                                     '</div>' +
                                     '</div>' +
                                     '<hr>' +
@@ -66,8 +66,37 @@ function postListFromUserID(user_id){
     return getUser(user_id).posts;
 }
 
+function draw_post_list(user_id){
+    console.log(user_id);
+    const post_list = postListFromUserID(user_id);
+    if(post_list.length == 0){
+        console.log('no posts');
+    }
+    var contents = '';
+    var post;
+    for(var i = 0; i < post_list.length; i++){
+        post_id = post_list[i];
+        contents +=
+        '<div class="col-sm-4">' +
+            '<div class="post" onclick="visit_post(' + post_id + ')">' +
+                '<img class="a" src="../userdata/post_images/post' + post_id + 'a.jpg" alt="">' +
+                '<img class="b" src="../userdata/post_images/post' + post_id + 'b.jpg" alt="">' +
+            '</div>' +
+        '</div>';
+    }
+    console.log(contents);
+    document.getElementById("row").innerHTML = contents;
+}
+
+function visit_post(post_id){
+    sessionStorage.setItem('requested_post', post_id);
+    window.location.href = "post.html"
+}
+
 function sorted_posts(){
 
 }
 
-function is_before(post_1, post_2)
+function is_before(post_1, post_2){
+
+}

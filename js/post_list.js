@@ -1,3 +1,7 @@
+function post_order(){
+    return [85, 31, 1, 70, 96, 42, 9, 41, 59, 25, 48, 87, 83, 33, 8, 57, 34, 64, 89, 80, 28, 2, 99, 45, 60, 39, 6, 53, 67, 63, 51, 11, 12, 40, 74, 78, 7, 90, 0, 18, 5, 54, 43, 16, 52, 72, 47, 77, 81, 95, 68, 24, 15, 35, 19, 97, 62, 75, 58, 13, 65, 32, 29, 46, 38, 94, 84, 22, 66, 36, 4, 49, 61, 10, 21, 37, 27, 26, 76, 20, 56, 55, 73, 79, 30, 69, 93, 14, 17, 3, 23, 98, 82, 71, 91, 86, 50, 44, 92, 88];
+}
+
 function post_list() {
     return [
         {
@@ -11,6 +15,7 @@ function post_list() {
             },
             "a": 19,
             "b": 25,
+            "caption" : "Which picture goes on the gram?",
             "comments": 7,
             "id": 0,
             "user": 62,
@@ -26,6 +31,7 @@ function post_list() {
             },
             "a": 1,
             "b": 0,
+            "caption" : "Check out buddy's instagram!",
             "comments": 0,
             "id": 1,
             "user": 85,
@@ -41,6 +47,7 @@ function post_list() {
             },
             "a": 2648,
             "b": 2667,
+            "caption" : "Picture perfect...",
             "comments": 755,
             "id": 2,
             "user": 3,
@@ -56,6 +63,7 @@ function post_list() {
             },
             "a": 16,
             "b": 14,
+            "caption" : "Beach time!",
             "comments": 9,
             "id": 3,
             "user": 49,
@@ -71,6 +79,7 @@ function post_list() {
             },
             "a": 3,
             "b": 3,
+            "caption" : "1am vs 1pm... Which picture does Instagram see?",
             "comments": 0,
             "id": 4,
             "user": 76,
@@ -86,6 +95,7 @@ function post_list() {
             },
             "a": 66,
             "b": 22,
+            "caption" : "#cute #cat",
             "comments": 94,
             "id": 5,
             "user": 45,
@@ -101,6 +111,7 @@ function post_list() {
             },
             "a": 171,
             "b": 551,
+            "caption" : "#pickforinstagram",
             "comments": 25,
             "id": 6,
             "user": 18,
@@ -116,6 +127,7 @@ function post_list() {
             },
             "a": 1350,
             "b": 257,
+            "caption" : "Which picture do you like best?",
             "comments": 307,
             "id": 7,
             "user": 7,
@@ -131,6 +143,7 @@ function post_list() {
             },
             "a": 442,
             "b": 449,
+            "caption" : "Telophoto vs Macro lens. Which gives a better shot?",
             "comments": 68,
             "id": 8,
             "user": 33,
@@ -146,6 +159,7 @@ function post_list() {
             },
             "a": 10,
             "b": 16,
+            "caption" : "Portrait or landscape? #pickforinstagram",
             "comments": 1,
             "id": 9,
             "user": 72,
@@ -161,6 +175,7 @@ function post_list() {
             },
             "a": 4185,
             "b": 3868,
+            "caption" : "#pickforinstagram",
             "comments": 161,
             "id": 10,
             "user": 8,
@@ -176,6 +191,7 @@ function post_list() {
             },
             "a": 30,
             "b": 113,
+            "caption" : "Which pic do you like better?",
             "comments": 34,
             "id": 11,
             "user": 40,

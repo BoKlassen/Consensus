@@ -402,7 +402,7 @@ function user_list() {
             "followers": 223,
             "following": 47,
             "name": "Lonie Dehmel",
-            "bio": "It is less about becoming a better perso, and more of being better, as a person",
+            "bio": "It is less about becoming a better person, and more of being better, as a person",
             "id": 45,
             "posts": [5],
             "username": "loniedehmel"

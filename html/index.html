@@ -17,6 +17,7 @@
     <script src="../js/posts.js"></script>
     <script src="../js/post_list.js"></script>
     <script src="../js/user_list.js"></script>
+    <script src="../js/vote.js"></script>
 
 </head>
 
@@ -37,15 +38,15 @@
             </div>
         </section>
         <script type="text/javascript">
-            // const order = post_order();
-            // for (var i = order.length - 1; i >= 0; i--) {
-            //     draw_post(order[i]);
-            // }
-
-
-            for (var i = 0; i < 105; i++) {
-                draw_post(i);
+            console.log('a');
+            const order = post_order();
+            for (var i = order.length - 1; i >= 0; i--) {
+                draw_post(order[i]);
             }
+            console.log('b');
+
+            window.onload += refresh_votes();
+            console.log('c');
         </script>
     </section>
     <footer>

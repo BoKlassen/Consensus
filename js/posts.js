@@ -3,6 +3,7 @@ function draw_post(post_id){
     const shares = post.shares;
     const comments = post.comments;
     const likes = post.likes;
+    const caption = post.caption;
     const user_id = userIDFromPostID(post_id);
     const user = getUser(user_id);
     const username = user.username;
@@ -18,13 +19,16 @@ function draw_post(post_id){
                                     '<img class="util-button" src="../images/options.png" alt="Options Button">' +
                                     '</div>' +
                                     '</div>' +
+                                    '<div class="caption">' +
+                                    caption +
+                                    '</div>' +
                                     '<hr>' +
                                     '<div id="post">' +
                                         '<div id="left" class="col-sm-6">' +
-                                            '<img src="../userdata/post_images/post' + post_id + 'a.jpg">' +
+                                            '<img id="post' + post_id + 'a" src="../userdata/post_images/post' + post_id + 'a.jpg"  onclick="(a_vote(' + post_id + '))">' +
                                         '</div>' +
                                         '<div id="right" class="col-sm-6">' +
-                                            '<img src="../userdata/post_images/post' + post_id + 'b.jpg">' +
+                                            '<img id="post' + post_id + 'b" src="../userdata/post_images/post' + post_id + 'b.jpg"  onclick="(b_vote(' + post_id + '))">' +
                                         '</div>' +
                                     '</div>' +
                                 '<hr>' +

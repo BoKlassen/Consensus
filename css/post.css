@@ -11,6 +11,7 @@
     object-fit: cover;
     border: 1px solid #202020;
     border-radius: 20px;
+    position: sticky;
 }
 
 .util-button{
@@ -43,4 +44,17 @@
 
 .interactions{
     font-size: 32px;
+}
+
+#a-vote, #b-vote{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(100, 100, 100, 50);
+    position: relative;
+}
+
+.caption{
+    text-align: left;
+    font-size: 32px;
+    padding: 12px 0px 0px 12px;
 }

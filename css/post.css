@@ -1,60 +1,343 @@
-#post-wrapper{
-    width: 1000px;
-    text-align: center;
-    margin: 10px auto;
+#post-wrapper {
+  width: 1000px;
+  text-align: center;
+  margin: 10px auto;
 }
 
-#left img, #right img{
+#right, #left {
+  padding: 0;
+}
+
+#left img, #right img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  object-fit: cover;
+  position: sticky;
+}
+
+#profile img {
+  margin: 5px auto;
+  height: 100px;
+  width: 100px;
+}
+
+#profile img {
+  border: 2px solid black;
+  border-radius: 55px;
+}
+
+.container hr {
+  margin: 5px;
+}
+
+#username {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 32px;
+}
+
+#a-vote, #b-vote {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.caption {
+  text-align: left;
+  font-size: 32px;
+  padding: 10px 2px 2px 0px;
+}
+
+.util-button {
+  text-align: right;
+  margin: auto;
+  height: 60px;
+  width: 60px;
+  float: right;
+}
+
+#share, #comment, #like {}
+
+.interactions {
+  font-size: 36px;
+  padding: 12px 0px 12px 5px;
+  float: left;
+}
+
+#post-footer div {
+  padding: 0px;
+  height: 80px;
+  padding: 10px 0px;
+}
+
+#post-header div {
+  height: 110px;
+}
+
+#options {
+  height: 100px;
+}
+
+#options img {
+  margin: 35px auto;
+  width: 50px;
+  height: 50px;
+}
+
+.username, .caption {
+  height: 60px;
+}
+
+#header-info {
+  font-size: 32px;
+  text-align: left;
+}
+
+.caption {
+  height: 100%;
+  width: 100%;
+}
+
+#post-header div {
+  margin: 0px;
+  padding: 0;
+}
+
+
+@media screen and (max-width: 1080px) {
+
+  #post-wrapper {
+    width: 758px;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  #right, #left {
+    padding: 0;
+  }
+
+  #left img, #right img {
     margin: 0;
     padding: 0;
     width: 100%;
     object-fit: cover;
-    border: 1px solid #202020;
-    border-radius: 20px;
     position: sticky;
-}
+  }
 
-.util-button{
+  #profile img {
+    margin: 5px auto;
+    height: 100px;
+    width: 100px;
+  }
+
+  #profile img {
+    border: 2px solid black;
+    border-radius: 55px;
+  }
+
+  .container hr {
     margin: 5px;
-    height: 40px;
-    width: 40px;
-}
+  }
 
-#profile img{
-    margin: 0;
-    height: 50px;
-    width: 50px;
-}
-
-#profile img{
-    border: 1px solid black;
-    border-radius: 30px;
-}
-
-.container hr{
-    margin: 5px;
-}
-
-#username{
+  #username {
     display: flex;
     align-items: center;
     text-align: left;
     font-size: 32px;
-}
+  }
 
-.interactions{
-    font-size: 32px;
-}
-
-#a-vote, #b-vote{
+  #a-vote, #b-vote {
     width: 100px;
     height: 100px;
-    background-color: rgba(100, 100, 100, 50);
     position: relative;
-}
+  }
 
-.caption{
+  .caption {
     text-align: left;
     font-size: 32px;
-    padding: 12px 0px 0px 12px;
+    padding: 10px 2px 2px 0px;
+  }
+
+  .util-button {
+    text-align: right;
+    margin: auto;
+    height: 60px;
+    width: 60px;
+    float: right;
+  }
+
+  #share, #comment, #like {}
+
+  .interactions {
+    font-size: 36px;
+    padding: 12px 0px 12px 5px;
+    float: left;
+  }
+
+  #post-footer div {
+    padding: 0px;
+    height: 80px;
+    padding: 10px 0px;
+  }
+
+  #post-header div {
+    height: 110px;
+  }
+
+  #options {
+    height: 100px;
+  }
+
+  #options img {
+    margin: 35px auto;
+    width: 50px;
+    height: 50px;
+  }
+
+  .username, .caption {
+    height: 60px;
+  }
+
+  #header-info {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .caption {
+    height: 100%;
+    width: 100%;
+  }
+
+  #post-header div {
+    margin: 0px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+    #profile-wrapper{
+        width: 768px;
+    }
+
+    .profile-picture{
+        width: 768px;
+    }
+
+  #post-wrapper {
+    width: 400px;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  #right, #left {
+    padding: 0;
+  }
+
+  #post-list{
+      width:400px;
+  }
+
+  #left img, #right img {
+    margin: 0;
+    padding: 0;
+    width: 45vw;
+    object-fit: cover;
+    position: sticky;
+    opacity: 20%;
+  }
+
+  #profile img {
+    margin: 5px auto;
+    height: 100px;
+    width: 100px;
+  }
+
+  #profile img {
+    border: 2px solid black;
+    border-radius: 55px;
+  }
+
+  .container hr {
+    margin: 5px;
+  }
+
+  #username {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 32px;
+  }
+
+  #a-vote, #b-vote {
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+
+  .caption {
+    text-align: left;
+    font-size: 32px;
+    padding: 10px 2px 2px 0px;
+  }
+
+  .util-button {
+    text-align: right;
+    margin: auto;
+    height: 60px;
+    width: 60px;
+    float: right;
+  }
+
+  #share, #comment, #like {}
+
+  .interactions {
+    font-size: 36px;
+    padding: 12px 0px 12px 5px;
+    float: left;
+  }
+
+  #post-footer div {
+    padding: 0px;
+    height: 80px;
+    padding: 10px 0px;
+  }
+
+  #post-header div {
+    height: 110px;
+  }
+
+  #options {
+    height: 100px;
+  }
+
+  #options img {
+    margin: 35px auto;
+    width: 50px;
+    height: 50px;
+  }
+
+  .username, .caption {
+    height: 60px;
+  }
+
+  #header-info {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .caption {
+    height: 100%;
+    width: 100%;
+  }
+
+  #post-header div {
+    margin: 0px;
+    padding: 0;
+  }
+}
+
+div div div span{
+    font-size: 36px;
 }

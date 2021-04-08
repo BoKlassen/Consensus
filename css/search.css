@@ -1,0 +1,60 @@
+#content-wrapper{
+    width: 600px;
+    margin: auto;
+}
+
+.row{
+    width: 600px;
+}
+
+#search{
+    font-size: 32px;
+}
+
+#searchbar{
+    padding: 10px 0px;
+}
+
+#results li{
+    height: 50px;
+}
+
+.profile{
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.container{
+    padding: 5px;
+}
+
+a{
+    font-size: 24px;
+}
+
+#no_search {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.col-sm-10{
+    height:50px;
+}
+.col-sm-2{
+    height:50px;
+}
+
+.name-wrapper{
+    padding: 0;
+    margin: 13px 0;
+}
+
+.image-wrapper{
+    margin-left: 25px;
+    padding: 4px 0;
+}

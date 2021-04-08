@@ -1,40 +1,94 @@
-header, footer{
-    height: 5vh;
-    width: 100vw
+header, footer {
+  height: 5vh;
+  width: 100vw
+
 }
 
-.header{
-    height: 5vh;
-    width: 100vw;
-    background-color: #202020;
-    box-sizing: border-box;
-    border-bottom: 0.2vh black solid;
-    position: fixed;
-    top: 0;
+.header {
+  height: 5vh;
+  width: 100vw;
+  background-color: #202020;
+  box-sizing: border-box;
+  border-bottom: 0.2vh black solid;
+  position: fixed;
+  top: 0;
 }
 
-.headerlogo{
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
+.right {
+  text-align: right;
+  margin: 2px 5px 0px 0px;
 }
 
-.headerlogo img{
-    height: 5vh;
+#logout {
+  height: 4vh;
+  width: 4vh;
 }
 
-section{
-    height: 90vh;
-    background-color: #fafafa;
-    overflow-y: scroll;
+.headerlogo {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.footer{
-    height: 5vh;
-    width: 100vw;
-    background-color: #202020;
-    box-sizing: border-box;
-    border-top: 0.2vh black solid;
-    position: fixed;
-    bottom: 0;
+.headerlogo img {
+  height: 5vh;
+}
+
+section {
+  height: 90vh;
+  background-color: #fafafa;
+  overflow-y: scroll;
+}
+
+.footer {
+  height: 5vh;
+  width: 100vw;
+  background-color: #202020;
+  box-sizing: border-box;
+  border-top: 0.2vh black solid;
+  position: fixed;
+  bottom: 0;
+}
+
+#home-button {
+  height: 4vh;
+  width: 4vh;
+}
+
+#search-button {
+  height: 4vh;
+  width: 4vh;
+}
+
+#profile-button {
+  height: 4vh;
+  width: 4vh;
+}
+
+.footer-left {
+    margin-top: 0.5vh;
+  text-align: right;
+}
+
+.footer-center {
+    margin-top: 0.5vh;
+  text-align: center;
+}
+
+.footer-right {
+  margin-top: 0.5vh;
+  text-align: left;
+}
+
+table{
+  width: inherit;
+}
+
+#search-button, #home-button, #profile-button{
+    height: 4vh;
+    width: 4vh;
+}
+
+#footer-row{
+    width: 100%;
 }

@@ -2,40 +2,62 @@ function a_vote(post_id){
     var a_votes = get_a_votes();
     var b_votes = get_b_votes();
 
-    remove_vote(a_votes, post_id);
-    remove_vote(b_votes, post_id);
+    if(a_votes.includes(post_id)){
+        remove_vote(a_votes, post_id);
+        a_default(post_id);
+    }else{
+        a_votes.push(post_id);
+        remove_vote(b_votes, post_id);
 
-    a_votes.push(post_id);
+        a_style(post_id);
+    }
 
     a_str = JSON.stringify(a_votes);
     b_str = JSON.stringify(b_votes);
     sessionStorage.setItem('a_votes', a_str);
     sessionStorage.setItem('b_votes', b_str);
 
-    document.getElementById('post' + post_id + 'a').style.border = "8px solid green";
-    document.getElementById('post' + post_id + 'a').style.opacity = "1";
-    document.getElementById('post' + post_id + 'b').style.border = "1px solid black";
-    document.getElementById('post' + post_id + 'b').style.opacity = "0.7";
+    console.log('a_votes: ' + a_votes);
+    console.log('b_votes: ' + b_votes);
+
+    refresh_vote(post_id);
 }
 
 function b_vote(post_id){
     var a_votes = get_a_votes();
     var b_votes = get_b_votes();
 
-    remove_vote(a_votes, post_id);
-    remove_vote(b_votes, post_id);
+    if(b_votes.includes(post_id)){
+        remove_vote(b_votes, post_id);
 
-    b_votes.push(post_id);
+        b_default(post_id);
+    }else{
+        b_votes.push(post_id);
+        remove_vote(a_votes, post_id);
+
+        b_style(post_id);
+    }
 
     a_str = JSON.stringify(a_votes);
     b_str = JSON.stringify(b_votes);
     sessionStorage.setItem('a_votes', a_str);
     sessionStorage.setItem('b_votes', b_str);
 
-    document.getElementById('post' + post_id + 'b').style.border = "8px solid green";
-    document.getElementById('post' + post_id + 'b').style.opacity = "1";
-    document.getElementById('post' + post_id + 'a').style.border = "1px solid black";
-    document.getElementById('post' + post_id + 'a').style.opacity = "0.7";
+    console.log('a_votes: ' + a_votes);
+    console.log('b_votes: ' + b_votes);
+
+    refresh_vote(post_id);
+}
+
+function did_vote_a(post_id){
+    const a_votes = get_a_votes();
+    console.log('a');
+    return a_votes.includes(post_id);
+}
+
+function did_vote_b(post_id){
+    const b_votes = get_b_votes();
+    return b_votes.includes(post_id);
 }
 
 function get_a_votes(){
@@ -80,16 +102,48 @@ function refresh_votes(){
 
     for(var i = 0; i < a_votes.length; i++){
         post_id = a_votes[i];
-        document.getElementById('post' + post_id + 'a').style.border = "8px solid green";
-        document.getElementById('post' + post_id + 'a').style.opacity = "1";
-        document.getElementById('post' + post_id + 'b').style.border = "1px solid black";
-        document.getElementById('post' + post_id + 'b').style.opacity = "0.7";
+        a_style(post_id);
     }
     for(var i = 0; i < b_votes.length; i++){
         post_id = b_votes[i];
-        document.getElementById('post' + post_id + 'b').style.border = "8px solid green";
-        document.getElementById('post' + post_id + 'b').style.opacity = "1";
-        document.getElementById('post' + post_id + 'a').style.border = "1px solid black";
-        document.getElementById('post' + post_id + 'a').style.opacity = "0.7";
+        b_style(post_id);
     }
+}
+
+function refresh_vote(post_id){
+    const a_votes = get_a_votes();
+    const b_votes = get_b_votes();
+
+    document.getElementById('stat' + post_id + 'b').children[0].innerHTML = b_stat(post_id) + '% (' + count_b_votes(post_id) + ' votes)';
+    document.getElementById('stat' + post_id + 'a').children[0].innerHTML = a_stat(post_id) + '% (' + count_a_votes(post_id) + ' votes)';
+}
+
+function a_style(post_id){
+    document.getElementById('post' + post_id + 'a').style.borderTop = "8px solid #FFCB14";
+    document.getElementById('post' + post_id + 'a').style.borderRight = "6px solid #FFCB14";
+    document.getElementById('post' + post_id + 'a').style.borderBottom = "8px solid #FFCB14";
+    document.getElementById('post' + post_id + 'a').style.borderLeft = "6px solid #FFCB14";
+    document.getElementById('post' + post_id + 'a').style.opacity = "1";
+    document.getElementById('post' + post_id + 'b').style.border = "none";
+    document.getElementById('post' + post_id + 'b').style.opacity = "0.5";
+}
+
+function b_style(post_id){
+    document.getElementById('post' + post_id + 'b').style.borderTop = "8px solid #FFCB14";
+    document.getElementById('post' + post_id + 'b').style.borderRight = "6px solid #FFCB14";
+    document.getElementById('post' + post_id + 'b').style.borderBottom = "8px solid #FFCB14";
+    document.getElementById('post' + post_id + 'b').style.borderLeft = "6px solid #FFCB14";
+    document.getElementById('post' + post_id + 'b').style.opacity = "1";
+    document.getElementById('post' + post_id + 'a').style.border = "none";
+    document.getElementById('post' + post_id + 'a').style.opacity = "0.5";
+}
+
+function a_default(post_id){
+    document.getElementById('post' + post_id + 'a').style.border = "none";
+    document.getElementById('post' + post_id + 'a').style.opacity = "1";
+}
+
+function b_default(post_id){
+    document.getElementById('post' + post_id + 'b').style.border = "none";
+    document.getElementById('post' + post_id + 'b').style.opacity = "1";
 }

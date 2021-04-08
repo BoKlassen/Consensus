@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Consensus</title>
+  <meta name="description" content="Consensus">
+  <meta name="author" content="Brandon Klassen">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/format.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <script src="../js/login.js"></script>
+  <script src="../js/user.js"></script>
+  <script src="../js/posts.js"></script>
+  <script src="../js/post_list.js"></script>
+  <script src="../js/user_list.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/interaction.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="headerlogo">
+        <img id="headerlogo" src="../images/headerlogo.png" alt="consensus logo">
+      </div>
+    </div>
+  </header>
+  <section>
+      <div id="content-wrapper">
+          <div id="searchbar">
+              <input type="search" id="search" class="form-control form-control-lg" oninput="search()"/>
+          </div>
+          <ul id="results">
+              <li id="no_search"> Search for a user</li>
+          </ul>
+      </div>
+  </section>
+  <footer>
+    <div class="footer">
+      <table>
+        <tr>
+          <td>
+            <div class="footer-left">
+              <a href="login.html"><img id="home-button" src="../images/home.svg" onclick="redirect('index.html')"></a>
+            </div>
+          </td>
+          <td>
+            <div class="footer-center">
+              <a href="search.html"><img id="search-button" src="../images/search.svg" onclick="redirect('search.html')"></a>
+            </div>
+          </td>
+          <td>
+            <div class="footer-right">
+              <a href="index.html"><img id="profile-button" src="../images/profile.svg" onclick="visit_self()"></a>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </footer>
+</body>
+
+</html>

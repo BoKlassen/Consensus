@@ -1,58 +1,80 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
 
-    <title>Consensus</title>
-    <meta name="description" content="Consensus">
-    <meta name="author" content="Brandon Klassen">
-    <script src="../js/userdata.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/format.css">
-    <link rel="stylesheet" href="../css/post.css">
-    <script src="../js/user.js"></script>
-    <script src="../js/posts.js"></script>
-    <script src="../js/post_list.js"></script>
-    <script src="../js/user_list.js"></script>
-    <script src="../js/vote.js"></script>
-
+<meta charset="utf-8">
+<title>Consensus</title>
+<meta name="description" content="Consensus">
+<meta name="author" content="Brandon Klassen">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/format.css">
+<link rel="stylesheet" href="../css/post.css">
+<script src="../js/user.js"></script>
+<script src="../js/posts.js"></script>
+<script src="../js/post_list.js"></script>
+<script src="../js/user_list.js"></script>
+<script src="../js/vote.js"></script>
+<script src="../js/login.js"></script>
+<script src="../js/interaction.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <div class="headerlogo">
-                <a href="index.html"><img id="headerlogo" src="../images/headerlogo.png" alt="consensus logo"></a>
-            </div>
-        </div>
-    </header>
+  <script type="text/javascript">
+    verify_login();
+  </script>
+  <header>
+    <div class="header">
+      <div class="headerlogo">
+        <a href="index.html"><img id="headerlogo" src="../images/headerlogo.png" alt="consensus logo"></a>
+      </div>
+      <div class="right">
+        <a href="login.html"><img id="logout" src="../images/logout.svg"></a>
+      </div>
+    </div>
+  </header>
+  <section>
     <section>
-        <section>
-            <div id="post_list">
-                <ul>
-
-                </ul>
-            </div>
-        </section>
-        <script type="text/javascript">
-            console.log('a');
-            const order = post_order();
-            for (var i = order.length - 1; i >= 0; i--) {
-                draw_post(order[i]);
-            }
-            console.log('b');
-
-            window.onload += refresh_votes();
-            console.log('c');
-        </script>
+      <div id="post_list">
+        <ul>
+        </ul>
+      </div>
     </section>
-    <footer>
-        <div class="footer">
-            <div class="footer"></div>
-        </div>
-    </footer>
+    <script type="text/javascript">
+      const order = post_order();
+      for (var i = order.length - 1; i >= 0; i--) {
+        draw_post(order[i]);
+      }
+      window.onload += refresh_votes();
+    </script>
+  </section>
+  <footer>
+    <div class="footer">
+      <table>
+        <tr>
+          <td>
+            <div class="footer-left">
+              <a><img id="home-button" src="../images/home.svg" onclick="redirect('index.html')"></a>
+            </div>
+          </td>
+          <td>
+            <div class="footer-center">
+              <a><img id="search-button" src="../images/search.svg" onclick="redirect('search.html')"></a>
+            </div>
+          </td>
+          <td>
+            <div class="footer-right">
+              <a><img id="profile-button" src="../images/profile.svg" onclick="visit_self()"></a>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </footer>
+
 </body>
+
 </html>

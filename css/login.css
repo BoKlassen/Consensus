@@ -45,6 +45,10 @@ time, mark, audio, video {
     text-align: center;
 }
 
+#error {
+  display: none;
+}
+
 .submit{
     margin-top: 10px;
     display: flex;

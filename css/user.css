@@ -67,3 +67,8 @@
     width: 150px;
     object-fit: contain;
 }
+
+#no-posts{
+    margin: 20px auto;
+    font-size: 24px;
+}
